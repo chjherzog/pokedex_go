@@ -1,8 +1,23 @@
 package main
 
+import (
+	"fmt"
+	"strings"
+)
 
-import "fmt"
+func CleanInput(text string) []string {
+	trimmedText := strings.Fields(text)
+	var loweredText []string
+	for i := range trimmedText {
+		loweredText = append(loweredText, strings.ToLower(trimmedText[i]))
+	}
+	return loweredText
+}
 
-main(){
-	fmt.Println("Hello, World!")
+func main() {
+	cleanedText := CleanInput("  hello    World")
+	for i := range cleanedText {
+		fmt.Println(cleanedText[i])
+	}
+	fmt.Println(cleanedText)
 }
