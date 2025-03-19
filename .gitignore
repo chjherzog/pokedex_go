@@ -1,2 +1,4 @@
 .vscode/
 repl.log
+debugging*.go
+pokedex_go
